@@ -1,0 +1,45 @@
+{
+  "name": "mcp-doctor",
+  "version": "0.1.0",
+  "description": "Diagnose and fix MCP configuration issues across Claude Desktop, Cursor, VS Code, and more",
+  "type": "module",
+  "bin": {
+    "mcp-doctor": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli/index.ts",
+    "start": "node dist/cli/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "vscode",
+    "debugging",
+    "cli",
+    "developer-tools",
+    "anthropic"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Crooj026/mcp-doctor"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}
