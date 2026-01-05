@@ -37,6 +37,14 @@ Found 2 config files:
 
   ~/.cursor/mcp.json:12
   Trailing comma detected (not allowed in JSON)
+
+   10 │     "github": {
+   11 │       "command": "npx",
+ > 12 │       "args": ["-y", "@modelcontextprotocol/server-github"],
+                                                                   ^
+   13 │     },
+   14 │   }
+
   💡 Remove the comma before the closing bracket/brace
 
 ⚠️  2 Warnings
@@ -92,6 +100,10 @@ mcp-doctor check
 
 # Skip server health tests (faster)
 mcp-doctor check --skip-health
+
+# Validate a specific config file
+mcp-doctor --file ./my-config.json
+mcp-doctor --file ~/custom/location/config.json
 ```
 
 ## Installation
@@ -105,6 +117,18 @@ npm install -g mcp-doctor
 # Or run directly with npx
 npx mcp-doctor
 ```
+
+## Config File Locations
+
+| Client                   | Location                                                          |
+| ------------------------ | ----------------------------------------------------------------- |
+| Claude Desktop (macOS)   | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| Claude Desktop (Windows) | `%APPDATA%/Claude/claude_desktop_config.json`                     |
+| Claude Desktop (Linux)   | `~/.config/claude/claude_desktop_config.json`                     |
+| Cursor                   | `~/.cursor/mcp.json`                                              |
+| VS Code                  | `~/Library/Application Support/Code/User/settings.json`           |
+| Claude Code              | `~/.claude.json` or `./.mcp.json`                                 |
+| Windsurf                 | `~/.codeium/windsurf/mcp_config.json`                             |
 
 ## FAQ
 
